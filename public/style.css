@@ -72,9 +72,9 @@ input {
 }
 
 input:focus {
-  border-color: var(--accent);
+  border-color: var(--gradient-end);
   outline: none;
-  box-shadow: 0 0 10px rgba(252, 163, 17, 0.4);
+  box-shadow: 0 0 10px rgba(0, 180, 216, 0.4);
   transform: scale(1.01);
 }
 
@@ -148,7 +148,7 @@ button[type="submit"]:hover {
   border-radius: 12px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   transition: all 0.3s;
-  border-left: 5px solid var(--accent);
+  border-left: 5px solid var(--gradient-end);
 }
 
 #borrower-list-ul li:hover, #borrowed-books-list li:hover {
@@ -171,7 +171,7 @@ button[type="submit"]:hover {
   padding: 15px;
   background-color: var(--light);
   border-radius: 10px;
-  border-left: 4px solid var(--accent);
+  border-left: 4px solid var(--gradient-end);
   transition: all 0.3s;
 }
 
