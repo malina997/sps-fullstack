@@ -1,0 +1,40 @@
+CREATE TABLE IF NOT EXISTS genres (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS authors (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  firstname TEXT NOT NULL,
+  lastname TEXT NOT NULL,
+  nationality TEXT
+);
+
+CREATE TABLE IF NOT EXISTS books (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  title TEXT NOT NULL,
+  author_id INTEGER,
+  genre_id INTEGER,
+  year INTEGER,
+  FOREIGN KEY (author_id) REFERENCES authors(id),
+  FOREIGN KEY (genre_id) REFERENCES genres(id)
+);
+
+CREATE TABLE IF NOT EXISTS borrowers (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  firstname TEXT NOT NULL,
+  lastname TEXT NOT NULL,
+  email TEXT,
+  phone TEXT
+);
+
+CREATE TABLE IF NOT EXISTS loans (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  book_id INTEGER NOT NULL,
+  borrower_id INTEGER NOT NULL,
+  loan_date TEXT NOT NULL,
+  return_date TEXT,
+  returned INTEGER DEFAULT 0,
+  FOREIGN KEY (book_id) REFERENCES books(id),
+  FOREIGN KEY (borrower_id) REFERENCES borrowers(id)
+);

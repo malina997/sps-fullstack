@@ -1,0 +1,19 @@
+{
+  "name": "git-fullstack",
+  "version": "1.0.0",
+  "description": "Knihovna",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "seed" : "node database/seed.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+    
+  },
+  "author": "Jakub Jandík",
+  "license": "ISC",
+  "dependencies": {
+    "expres": "^0.0.5",
+    "express": "^5.1.0",
+    "sqlite3": "^5.1.7"
+  }
+}

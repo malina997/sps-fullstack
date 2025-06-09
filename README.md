@@ -1,4 +1,4 @@
-# Jméno Příjmení
+# Jakub Jandík
 ---
 ## Zvolené rozšíření
 - Popisek

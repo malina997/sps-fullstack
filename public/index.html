@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Knihovna</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  </head>
+  <body>
+    <h1>📚 Knihovna📚</h1>
+    <main>
+      <h2>📚 přidat čtenáře 📚</h2>
+
+      <form id="borrower-form">
+        <input type="text" id="firstname" placeholder="Křestní jméno" required />
+        <input type="text" id="lastname" placeholder="Příjmení" required />
+        <input type="email" id="email" placeholder="Email" />
+        <input type="text" id="phone" placeholder="Telefonní číslo" />
+        <button type="submit">Přidat čtenáře</button>
+      </form>
+
+      <h2>📚 přidat knihu 📚</h2>
+      <form id="book-form">
+        <input type="text" id="title" placeholder="Název knihy" required />
+        <input type="text" id="author" placeholder="Autor" required />
+        <input type="number" id="year" placeholder="Rok vydání" required />
+        <input type="text" id="genre" placeholder="Žánr" required />
+        <button type="submit">Přidat knihu</button>
+      </form>
+      <section id="book-list"></section>
+    </main>
+
+ 
+    <section id="borrower-list"></section>
+    <section id="borrowed-books">
+        <h2>📚 Seznam čtenářů 📚</h2>
+        <ul id="borrower-list-ul"></ul>
+    </section>
+    <section id="borrowed-books">
+      <h2>📚 Vypůjčené knihy 📚</h2>
+      <ul id="borrowed-books-list"></ul>
+    </section>
+    
+    <script src="script.js"></script>
+  </body>
+</html>
